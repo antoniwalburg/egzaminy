@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title> Fabryka cukierków </title>
+        <link  rel="stylesheet" href="styl10.css"> 
+    </head>
+    <body>
+        <!-- Headers -->
+        <header class="header-left">
+            <a href="zamowienie.html"> Zamów cukierki </a>
+        </header>
+        <header class="header-right">
+            <a href="index.html" alt="Nasze logo">Cukierki</a>
+
+        </header>
+        <!-- Banners -->
+        <section class="banner">
+            <h1> Strefa zamówień </h1>
+        </section>
+        <!-- Main -->
+        <section class="main-left">
+            <text> Number kształtu </text>
+            <form>
+                <input type="number">
+            </form>
+            <text> skomponuj swój kolor, podaj RGB: </text>
+            <form>
+                R:
+                <input type="number" name="r">
+                G:
+                <input type="number" name="g">
+                B:
+                <input type="number" name="b">
+                <br>
+                <input type="submit" value="Zamówienie" name="sub">
+                <p id="modifier"> Twoje zamówienie </p>
+                <input type="submit" value="Kolor" name="color-sub">
+            </form>
+        </section>
+        <section class="main-right">
+            <h2> Nasza oferta </h2>
+            <table>
+                <tr>
+                    <td>Kształty</td>
+
+                    <td rowspan="2"> Możesz zamówić <br>
+                        dowolny kolor cukierka
+                    </td>
+                
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li> Cytryna </li>
+                            <li> Liść </li>
+                            <li> Banan </li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <!-- Footer -->
+       <footer>
+            <center><text>Autor strony: PESEL</text></center>
+       </footer> 
+    </body>
+    <script>
+        const button = document.getElementById("modifier");
+        button.addEventListener("click",function(){
+            
+        });
+        
+    </script>
+</html>
