@@ -1,4 +1,5 @@
 <html>
+    <!DOCTYPE html>
     <head>
         <title> Fabryka cukierków </title>
         <link  rel="stylesheet" href="styl10.css"> 
@@ -20,20 +21,20 @@
         <section class="main-left">
             <text> Number kształtu </text>
             <form>
-                <input type="number">
+                <input type="number" id="selectNumber" name="selectNumber">
             </form>
             <text> skomponuj swój kolor, podaj RGB: </text>
             <form>
                 R:
-                <input type="number" name="r">
+                <input type="number" id="r">
                 G:
-                <input type="number" name="g">
+                <input type="number" id="g">
                 B:
-                <input type="number" name="b">
+                <input type="number" id="b">
                 <br>
-                <input type="submit" value="Zamówienie" name="sub">
+                <input type="submit" value="Zamówienie" id="sub">
                 <p id="modifier"> Twoje zamówienie </p>
-                <input type="submit" value="Kolor" name="color-sub">
+                <input type="submit" value="Kolor" id="color-sub">
             </form>
         </section>
         <section class="main-right">
@@ -64,10 +65,34 @@
        </footer> 
     </body>
     <script>
-        const button = document.getElementById("modifier");
-        button.addEventListener("click",function(){
-            
+        const button = document.querySelector('#sub');
+        button.addEventListener('click', ()=> {
+            let myNumber = document.getElementById('selectNumber').value;
+            let modifier = document.querySelector('#modifier');
+            if(myNumber == 1){
+                modifier.innerHTML = "Twoje zamówienie to cukierek cytryna";
+            } else if(myNumber == 2){
+                modifier.innerHTML = "Twoje zamówienie to cukierek liść";
+            } else if(myNumber == 3){
+                modifier.innerHTML = "Twoje zamówienie to cukierek banan";
+            } else {
+                modifier.innerHTML = "Twoje zamówienie to inny";
+            }
+            event.preventDefault();
         });
+
+        const colorButton = document.querySelector('#color-sub')
+        colorButton.addEventListener('click', () => {
+
+            let red = document.getElementById('r').value;
+            let green = document.getElementById('g').value;
+            let blue = document.getElementById('b').value;
+
+            colorButton.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+
+            event.preventDefault();
+        })
+        
         
     </script>
 </html>
