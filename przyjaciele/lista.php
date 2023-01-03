@@ -32,7 +32,7 @@
                 $name = $r -> imie;
                 $surname = $r -> nazwisko;
                 $desc = $r -> opis;
-                echo "<img class='block-photo' src='photos/$photo' alt='przyjaciel'>";
+                echo "<img class='block-photo' src='photos/$photo' alt='przyjaciel' height='100px' width='100px'>";
                 echo "<section class='block-desc'> 
                 <h3> $name $surname </h3>
                 <p>$desc</p>
@@ -43,7 +43,7 @@
     </section>
     <!-- Footer Sections -->
     <footer class='footer-left'> 
-        <a> Stronę wykonał: OOOOOOOOOOO </a>
+        Stronę wykonał: OOOOOOOOOOO
     </footer>
 
     <footer class='footer-right'> 
