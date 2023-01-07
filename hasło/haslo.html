@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miernik jakości hasła</title>
+    <link href="styl.css" rel="stylesheet">
+</head>
+<body>
+    <header class="baner">
+        <h1> <a href=index.html> Sprawdź swoje hasło </a> </h1>
+    </header>
+    <section class="panel-left">
+        <h2> Wybierz </h2>
+        <ol>
+            <li> <a href=haslo.html> Sprawdź hasło </a></li>
+            <li> <a href=zasady.html> Zasady tworzenia hasła </a> </li>
+        </ol>
+    </section>
+    <section class="panel-right">
+        <img src="haslo.png">
+        <br>
+        Twoje hasło:<input type="password" id="password">
+        <input type="submit" id="submit" value="Sprawdź">
+        <br> </br>
+        <p id="ans"> </p>
+    </section>
+    <footer>
+        <h3> Miernik jakości hasła </h3>
+        <p> Stronę opracował: Antoni Walburg </p>
+    </footer>
+</body>
+<script>
+    const button = document.getElementById("submit");
+    button.addEventListener('click',function(){
+        let passwordValue = document.getElementById("password").value;
+        if (passwordValue.length == 0){
+            document.getElementById("ans").innerHTML = "WPISZ HASŁO!";
+            document.getElementById("ans").style.color = "red";
+        } else if (passwordValue.length >= 7 && /[0-9]/.test(passwordValue)){
+            document.getElementById("ans").innerHTML = "DOBRE";
+            document.getElementById("ans").style.color = "green";
+        } else if (passwordValue.length >= 4 && passwordValue.length <= 6 && /[0-9]/.test(passwordValue)){
+            document.getElementById("ans").innerHTML = "ŚREDNIE";
+            document.getElementById("ans").style.color = "blue";
+        }else {
+            document.getElementById("ans").innerHTML = "SŁABE";
+            document.getElementById("ans").style.color = "yellow";
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,49 @@
+.baner {
+    background-color: #829EB9;
+    height: 50px;
+    font-family: Arial;
+    text-align: center;
+}
+.panel-left {
+    background-color: #B3C6D9;
+    height: 600px;
+    width: 25%;
+    float: left;
+}
+.panel-right{
+    background-color: #E0E9F1;
+    height: 600px;
+    width: 75%;
+    text-align: center;
+    float: left;
+}
+footer {
+    background-color: #829EB9;
+    font-family: Arial;
+    text-align: right;
+}
+img {
+    margin: 30px;
+    padding: 10px;
+    border: 2px #B3C6D9 dotted;
+}
+table {
+    margin: 30px;
+    border: 2px solid;
+    width: 70%;
+}
+tr:hover {
+    background-color: blue;
+    color: white;
+}
+thead {
+    background-color: #B3C6D9;
+    border: 2px solid;
+}
+td {
+    border: 2px solid;
+}
+p {
+    margin: 30px;
+    display: inline;
+}
