@@ -21,8 +21,8 @@
     <section class="panel-right">
         <img src="haslo.png">
         <br>
-        Twoje hasło:<input type="password" id="password">
-        <input type="submit" id="submit" value="Sprawdź">
+        <p>Twoje hasło:<input type="password" id="password">
+        <input type="submit" id="submit" value="Sprawdź"> </p>
         <br> </br>
         <p id="ans"> </p>
     </section>
@@ -35,18 +35,19 @@
     const button = document.getElementById("submit");
     button.addEventListener('click',function(){
         let passwordValue = document.getElementById("password").value;
+        const element = document.getElementById("ans");
         if (passwordValue.length == 0){
-            document.getElementById("ans").innerHTML = "WPISZ HASŁO!";
-            document.getElementById("ans").style.color = "red";
+            element.innerHTML = "WPISZ HASŁO!";
+            element.style.color = "red";
         } else if (passwordValue.length >= 7 && /[0-9]/.test(passwordValue)){
-            document.getElementById("ans").innerHTML = "DOBRE";
-            document.getElementById("ans").style.color = "green";
+            element.innerHTML = "DOBRE";
+            element.style.color = "green";
         } else if (passwordValue.length >= 4 && passwordValue.length <= 6 && /[0-9]/.test(passwordValue)){
-            document.getElementById("ans").innerHTML = "ŚREDNIE";
-            document.getElementById("ans").style.color = "blue";
+            element.innerHTML = "ŚREDNIE";
+            element.style.color = "blue";
         }else {
-            document.getElementById("ans").innerHTML = "SŁABE";
-            document.getElementById("ans").style.color = "yellow";
+            element.innerHTML = "SŁABE";
+            element.style.color = "yellow";
         }
     })
 </script>
