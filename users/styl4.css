@@ -1,0 +1,30 @@
+* {
+    font-family: Helvetica;
+}
+header {
+    background-color:#AF4448;
+    color: white;
+    height: 20px;
+    text-align: center;
+}
+#block-left {
+    background-color: #FFA4A2;
+    height: 650px;
+    width: 50%;
+    float: left;
+}
+#block-right {
+    background-color: #FFA4A2;
+    height: 650px;
+    width: 50%;
+    float: right;
+}
+h4 {
+    margin: 0px;
+}
+#button {
+    background-color: #AF4448;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+}

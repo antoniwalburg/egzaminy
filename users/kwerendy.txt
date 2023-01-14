@@ -1,0 +1,4 @@
+Z1: SELECT id, imie, nazwisko, rok_urodzenia, zdjecie from osoby LIMIT 30;
+Z2: SELECT osoby.imie, osoby.nazwisko, osoby.rok_urodzenia, osoby.opis, osoby.zdjecie, hobby.nazwa from osoby,hobby where osoby.id = 10 and osoby.Hobby_id = hobby.id;
+Z3: SELECT AVG(rok_urodzenia), Min(rok_urodzenia), Max(rok_urodzenia) from osoby;
+Z4: UPDATE osoby set osoby.opis = 'programowanie' where osoby.Hobby_id = 4;
